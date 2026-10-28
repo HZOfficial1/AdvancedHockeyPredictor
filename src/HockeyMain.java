@@ -35,13 +35,14 @@ void main() {
             break;
         } else if (charTemp == 'p') {
             while (true) {
-                charTemp = IO.readln("\n\tPreset leagues:\n1. NHL 2025-2026\n\tEnter the number of your desired preset.\n\t≫ ").charAt(0);
+                charTemp = IO.readln("\n\tPreset leagues:\n1. NHL 2025-2026\n\n\tEnter the number of your desired preset.\n\t≫ ").charAt(0);
 
                 // Presets:
                 // NHL 2025-2026
                 if (charTemp == '1') {
                     gamesToPlay = 82;
                     teamsArray = SystemFunctions.presetOne();
+                    IO.println("You have selected preset one: NHL 2025-2026");
                     break;
                 }
 
@@ -198,7 +199,7 @@ void main() {
     }
 
     IO.println("\n═══════════════════════════════════════");
-    IO.println("🏆 STANLEY CUP CHAMPION: " + currentRound.getFirst().getName() + "! 🏆");
+    IO.println("✮ STANLEY CUP CHAMPION: " + currentRound.getFirst().getName() + "! ✮");
     IO.println("═══════════════════════════════════════");
     IO.println("\nThank you for using the advanced hockey predictor!");
     System.exit(97);

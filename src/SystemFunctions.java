@@ -16,7 +16,7 @@ public class SystemFunctions {
         IO.println("\n\t- - - - -\nHockey Predictor version 2.1.1\n\tWhat's new:\n- Fixed TeamBoost percentage applied incorrectly.");
         IO.println("\n\t- - - - -\nHockey Predictor version 2.2.0\n\tWhat's new:\n- Project now on GitHub!");
         IO.println("\n\t- - - - -\nHockey Predictor version 2.3.0\n\tWhat's new:\n- Reversed the Change Log\n- Updated the main menu to prepare for more preset leagues, and added a preset selection.\n- Internal changes to allow fo better preset teams.");
-
+        IO.println("\n\t- - - - -\nHockey Predictor version 2.3.1\n\tWhat's new:\n- Replaced emojis with standard Unicode icons\n- Added preset confirmation.\n- Internal updates to the TeamBoost method.");
     }
 
     // Loops to create a custom league.
@@ -128,9 +128,10 @@ public class SystemFunctions {
     }
 
     public static HockeyTeam[] teamBoost(HockeyTeam[] teamsArray) {
-        IO.println("\n\n\n\n\n\n\n\n\n\t⚡️ TeamBoost ⚡️");
+        IO.println("\n\n\n\n\n\n\n\n\n\t》TeamBoost️《");
         printLeagueNames(teamsArray);
-        int teamId= Integer.parseInt(IO.readln("Please enter the ID of the team you want to boost (1-32) ≫ "));
+        int highest = teamsArray.length;
+        int teamId= Integer.parseInt(IO.readln("Please enter the ID of the team you want to boost (1-"+ highest +") ≫ "));
         double boost = Double.parseDouble(IO.readln("Please enter the boost percentage (%) ≫ "));
         teamsArray[teamId - 1].setPercent(teamsArray[teamId - 1].getPercent() + ((teamsArray[teamId - 1].getPercent() ) * (boost/100)));
         IO.println("TeamBoost applied! The " + teamsArray[teamId - 1].getName() + " now have a winning percentage of " + teamsArray[teamId - 1].getPercent());
