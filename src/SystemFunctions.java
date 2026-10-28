@@ -17,6 +17,8 @@ public class SystemFunctions {
         IO.println("\n\t- - - - -\nHockey Predictor version 2.2.0\n\tWhat's new:\n- Project now on GitHub!");
         IO.println("\n\t- - - - -\nHockey Predictor version 2.3.0\n\tWhat's new:\n- Reversed the Change Log\n- Updated the main menu to prepare for more preset leagues, and added a preset selection.\n- Internal changes to allow fo better preset teams.");
         IO.println("\n\t- - - - -\nHockey Predictor version 2.3.1\n\tWhat's new:\n- Replaced emojis with standard Unicode icons\n- Added preset confirmation.\n- Internal updates to the TeamBoost method.");
+        IO.println("\n\t- - - - -\nHockey Predictor version 2.3.2\n\tWhat's new:\n- Added ToDo.txt to Git.");
+
     }
 
     // Loops to create a custom league.
