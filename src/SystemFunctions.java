@@ -8,6 +8,7 @@ import java.util.Comparator;
 public class SystemFunctions {
     // Prints the changelog.
     public static void changeLog(){
+        IO.println("\n\t- - - - -\nHockey Predictor version 2.2.0\n\tWhat's new:\n- Project now on GitHub!.");
         IO.println("\n\t- - - - -\nHockey Predictor version 2.1.1\n\tWhat's new:\n- Fixed TeamBoost percentage applied incorrectly.");
         IO.println("\n\t- - - - -\nHockey Predictor version 2.1.0\n\tWhat's new:\n- New feature: TeamBoost. TeamBoost allows you to \" boost \" default teams by adding a percentage to their record.\n- Fixed faulty win percentage logic.\n- Removed playoff intro text.");
         IO.println("\n\t- - - - -\nHockey Predictor version 2.0.3\n\tWhat's new:\n- Made user input lines display with more spacing between.\n- Tweaked code order to make a previously unseen line get printed.");
