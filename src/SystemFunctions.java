@@ -8,13 +8,15 @@ import java.util.Comparator;
 public class SystemFunctions {
     // Prints the changelog.
     public static void changeLog(){
-        IO.println("\n\t- - - - -\nHockey Predictor version 2.2.0\n\tWhat's new:\n- Project now on GitHub!.");
-        IO.println("\n\t- - - - -\nHockey Predictor version 2.1.1\n\tWhat's new:\n- Fixed TeamBoost percentage applied incorrectly.");
-        IO.println("\n\t- - - - -\nHockey Predictor version 2.1.0\n\tWhat's new:\n- New feature: TeamBoost. TeamBoost allows you to \" boost \" default teams by adding a percentage to their record.\n- Fixed faulty win percentage logic.\n- Removed playoff intro text.");
-        IO.println("\n\t- - - - -\nHockey Predictor version 2.0.3\n\tWhat's new:\n- Made user input lines display with more spacing between.\n- Tweaked code order to make a previously unseen line get printed.");
-        IO.println("\n\t- - - - -\nHockey Predictor version 2.0.2\n\tWhat's new:\n- Updated playoffs simulation to produce more accurate scores.\n- Tweaked codes comments to reflect the updated wording in selection menus.");
-        IO.println("\n\t- - - - -\nHockey Predictor version 2.0.1\n\tWhat's new:\n- Refined regular season simulation to be more realistic.\n- Due to this, the default score multiplier is now 14.\n- Fixed a bug where playoff series scores would display incorrectly.\n- Fixed bad wording in playoffs bumper.");
         IO.println("\n\t- - - - - \nHockey Predictor version 2.0.0\n\tWhat's new:\n- Playoffs now included.\n- More advanced prediction calculations.\n- All teams are here now!\n- Custom teams.\n- New team ranking system.\n- Accurate scheduling! \n- Away teams get their values changed correctly.\n- Lots of under-the-hood improvements.");
+        IO.println("\n\t- - - - -\nHockey Predictor version 2.0.1\n\tWhat's new:\n- Refined regular season simulation to be more realistic.\n- Due to this, the default score multiplier is now 14.\n- Fixed a bug where playoff series scores would display incorrectly.\n- Fixed bad wording in playoffs bumper.");
+        IO.println("\n\t- - - - -\nHockey Predictor version 2.0.2\n\tWhat's new:\n- Updated playoffs simulation to produce more accurate scores.\n- Tweaked codes comments to reflect the updated wording in selection menus.");
+        IO.println("\n\t- - - - -\nHockey Predictor version 2.0.3\n\tWhat's new:\n- Made user input lines display with more spacing between.\n- Tweaked code order to make a previously unseen line get printed.");
+        IO.println("\n\t- - - - -\nHockey Predictor version 2.1.0\n\tWhat's new:\n- New feature: TeamBoost. TeamBoost allows you to \" boost \" default teams by adding a percentage to their record.\n- Fixed faulty win percentage logic.\n- Removed playoff intro text.");
+        IO.println("\n\t- - - - -\nHockey Predictor version 2.1.1\n\tWhat's new:\n- Fixed TeamBoost percentage applied incorrectly.");
+        IO.println("\n\t- - - - -\nHockey Predictor version 2.2.0\n\tWhat's new:\n- Project now on GitHub!");
+        IO.println("\n\t- - - - -\nHockey Predictor version 2.3.0\n\tWhat's new:\n- Reversed the Change Log\n- Updated the main menu to prepare for more preset leagues, and added a preset selection.\n- Internal changes to allow fo better preset teams.");
+
     }
 
     // Loops to create a custom league.
@@ -37,7 +39,7 @@ public class SystemFunctions {
     }
 
     // Returns array of default NHL teams with 2025-2026 season win percentages
-    public static HockeyTeam[] defaultTeam() {
+    public static HockeyTeam[] presetOne() {
 
         HockeyTeam[] hockeyTeamArray = new HockeyTeam[32];
         hockeyTeamArray[0] = new HockeyTeam(0, 0, "Colorado Avalanche", 0, .738, 0);

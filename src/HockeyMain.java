@@ -25,7 +25,7 @@ void main() {
     }
     // League selection menu - choose between making a custom league or the preset 2025-2026 NHL teams.
     while (true) {
-        charTemp = IO.readln("\n\n\nWould you like to make a custom league, or simulate from values in the 2025-2026 season?\n\tEnter 'c' for a custom league.\n\tEnter 'd' for the preset league.\n\t≫ ").charAt(0);
+        charTemp = IO.readln("\n\n\nWould you like to make a custom league, or simulate from a preset league?\n\tEnter 'c' for a custom league.\n\tEnter 'p' for the preset leagues.\n\t≫ ").charAt(0);
         charTemp = Character.toLowerCase(charTemp);
 
 // The following calls the appropriate team type.
@@ -33,9 +33,25 @@ void main() {
             teamsArray = SystemFunctions.customTeam();
             gamesToPlay = Integer.parseInt(IO.readln("\n\n\nHow many games will each team be playing? ≫ "));
             break;
-        } else if (charTemp == 'd') {
-            gamesToPlay = 82;
-            teamsArray = SystemFunctions.defaultTeam();
+        } else if (charTemp == 'p') {
+            while (true) {
+                charTemp = IO.readln("\n\tPreset leagues:\n1. NHL 2025-2026\n\tEnter the number of your desired preset.\n\t≫ ").charAt(0);
+
+                // Presets:
+                // NHL 2025-2026
+                if (charTemp == '1') {
+                    gamesToPlay = 82;
+                    teamsArray = SystemFunctions.presetOne();
+                    break;
+                }
+
+
+
+                else {
+                    IO.println("You hit the Jumbotron! How? Try a valid option.");
+                }
+            }
+
                 while (true) {
                     charTemp = IO.readln("\n\n\nWould you like to add a TeamBoost?\n\tEnter 'y' for a TeamBoost.\n\tEnter 'n' for the regular values.\n\t≫ ").charAt(0);
                     charTemp = Character.toLowerCase(charTemp);
